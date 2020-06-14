@@ -4,7 +4,7 @@ public class Human {
     String firstName;
     String lastName;
     Animal pet;
-    Car auto;
+    private Car auto;
     private Double Salary;
 
     public void salary(){
@@ -22,5 +22,19 @@ public class Human {
             this.Salary=x;
             System.out.println("Twoja wypłata wynosi: " + this.Salary);
         }
+    }
+
+    public Car getVehicle() {
+        return this.auto;
+    }
+
+    public void setVehicle(Car vehicle) {
+        if (vehicle.value < this.Salary) {
+            System.out.println("Właśnie kupiłeś samochód za gotówkę!");
+            this.auto = vehicle;
+        } else if (vehicle.value / 12.0 < this.Salary) {
+            System.out.println("Gratuluję, kupiłeś samochód, niestety na kredyt");
+            this.auto = vehicle;
+        } else System.out.println("Zapisz się na studia i znajdź nową robotę albo idź po podwyżkę");
     }
 }

@@ -11,11 +11,15 @@ public class Main {
         me.pet.feed();
         for(int i=0;i<14;i++){
             me.pet.takeForAWalk();}
-        Car seat = new Car("Ibiza", "seat");
-        me.auto = seat;
 
         me.salary();
-        me.setSalary(5.0);
+        me.setSalary(11.0);
+
+        Car Ibiza = new Car("ibiza", "seat");
+        Car Renault = new Car("megane", "renault");
+        me.getVehicle();
+        me.setVehicle(Ibiza);
+        me.setVehicle(Renault);
     }
 
 }
