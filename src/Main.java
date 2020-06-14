@@ -20,6 +20,7 @@ public class Main {
         me.getVehicle();
         me.setVehicle(Ibiza);
         me.setVehicle(Renault);
+        System.out.println(me);
     }
 
 }
