@@ -17,10 +17,12 @@ public class Main {
 
         Car Ibiza = new Car("ibiza", "seat");
         Car Renault = new Car("megane", "renault");
+        Phone Sony_Ericson = new Phone("K310i", "Sony-Ericson");
         me.getVehicle();
         me.setVehicle(Ibiza);
         me.setVehicle(Renault);
         System.out.println(me);
+        System.out.println(Sony_Ericson);
     }
 
 }
