@@ -2,9 +2,14 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        Human me = new Human();
+        Human me = new Human("Human");
         me.firstName = "Kamil";
         me.lastName = "Socha";
+        me.cash = 10000.0;
+        Human you = new Human("Human");
+        you.firstName = "Krystian";
+        you.lastName = "Krostek";
+        you.cash = 10000.0;
 
         Animal dog = new Animal("dog");
         me.pet = dog;
@@ -13,7 +18,7 @@ public class Main {
             me.pet.takeForAWalk();}
 
         me.salary();
-        me.setSalary(11.0);
+        me.setSalary(4000.0);
 
         Car Ibiza = new Car("ibiza", "seat");
         Car Renault = new Car("megane", "renault");
@@ -21,8 +26,26 @@ public class Main {
         me.getVehicle();
         me.setVehicle(Ibiza);
         me.setVehicle(Renault);
+        if(Ibiza.equals(Renault)) System.out.println("Cena samochodów jest taka sama");
+        else System.out.println("Ceny samochodów są różne");
         System.out.println(me);
         System.out.println(Sony_Ericson);
+        System.out.println(dog);
+        System.out.println(Ibiza);
+        System.out.println(Renault);
+
+        try {
+            Ibiza.sell(me, you, 2000.0);
+        }
+        catch(Exception e){
+            System.out.println("Coś poszło nie tak");
+        }
+        try {
+            Renault.sell(me, you, 4000.0);
+        }
+        catch(Exception e){
+            System.out.println("Coś poszło nie tak");
+        }
     }
 
 }

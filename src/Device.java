@@ -1,4 +1,4 @@
-public abstract class Device {
+public abstract class Device implements Sellable{
     public final String model;
     public final String producer;
     public int yearOfProduction;
@@ -14,4 +14,9 @@ public abstract class Device {
     }
 
     abstract public void turnOn();
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+
+    }
 }

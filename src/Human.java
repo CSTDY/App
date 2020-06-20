@@ -1,11 +1,17 @@
 import java.time.LocalDateTime;
 
-public class Human {
+public class Human extends Animal implements Sellable {
     String firstName;
     String lastName;
     Animal pet;
-    private Car auto;
+    public Car auto;
     private Double Salary;
+    public Double cash;
+    public Phone phone;
+
+    public Human(String species) {
+        super(species);
+    }
 
     public void salary(){
         System.out.println("Dane o wypłacie zostały pobrane: " + LocalDateTime.now());
@@ -41,4 +47,10 @@ public class Human {
     public String toString() {
         return firstName + " " + lastName + " " + pet + " " + auto + " Wynagrodzenie: " + Salary;
     }
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+
+    }
+
 }
