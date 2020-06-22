@@ -1,17 +1,23 @@
+package pacage;
+
+import creatures.Animal;
+import creatures.Human;
+import creatures.Pet;
+
 public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        Human me = new Human("Human");
+        Human me = new Human("creatures.Human");
         me.firstName = "Kamil";
         me.lastName = "Socha";
         me.cash = 10000.0;
-        Human you = new Human("Human");
+        Human you = new Human("creatures.Human");
         you.firstName = "Krystian";
         you.lastName = "Krostek";
         you.cash = 10000.0;
 
-        Animal dog = new Animal("dog");
+        Pet dog = new Pet("dog");
         me.pet = dog;
         me.pet.feed();
         for(int i=0;i<14;i++){

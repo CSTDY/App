@@ -1,4 +1,9 @@
-public abstract class Device implements Sellable{
+package pacage;
+
+import creatures.Human;
+import creatures.Sellable;
+
+public abstract class Device implements Sellable {
     public final String model;
     public final String producer;
     public int yearOfProduction;

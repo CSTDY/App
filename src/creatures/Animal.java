@@ -1,7 +1,10 @@
+package creatures;
+
 import java.io.File;
 
-public class Animal implements Sellable {
-    final String species;
+
+public abstract class Animal implements Sellable, Feedable {
+    public String species;
     Double weight;
     String name;
     File pic;
@@ -36,6 +39,11 @@ public class Animal implements Sellable {
             this.weight++;
             System.out.println("thx for food bro my weight is: " + this.weight);
         }
+    }
+
+    @Override
+    public void feed(Integer foodWeight) {
+
     }
 
     public void takeForAWalk() {

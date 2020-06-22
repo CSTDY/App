@@ -1,7 +1,12 @@
+package pacage;
+
+import creatures.Human;
+import creatures.Sellable;
+
 import java.io.File;
 import java.util.Objects;
 
-public class Car extends Device implements  Sellable{
+public class Car extends Device implements Sellable {
     Double weight;
     String plate;
     File pic;

@@ -1,4 +1,7 @@
-import java.io.File;
+package pacage;
+
+import creatures.Human;
+import creatures.Sellable;
 
 public class Phone extends Device implements Sellable {
     String os;

@@ -1,9 +1,14 @@
+package creatures;
+
+import pacage.Car;
+import pacage.Phone;
+
 import java.time.LocalDateTime;
 
 public class Human extends Animal implements Sellable {
-    String firstName;
-    String lastName;
-    Animal pet;
+    public String firstName;
+    public String lastName;
+    public Animal pet;
     public Car auto;
     private Double Salary;
     public Double cash;
@@ -53,4 +58,8 @@ public class Human extends Animal implements Sellable {
 
     }
 
+    @Override
+    public void feed(Integer foodWeight) {
+
+    }
 }
