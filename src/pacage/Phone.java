@@ -3,8 +3,14 @@ package pacage;
 import creatures.Human;
 import creatures.Sellable;
 
+import java.net.URL;
+import java.util.List;
+
 public class Phone extends Device implements Sellable {
     String os;
+    static final int serverAddress = 0;
+    static final String protocol = "protocol";
+    static final String version = "1.4";
 
     public Phone(String model, String producer) {
         super(model, producer);
@@ -12,6 +18,26 @@ public class Phone extends Device implements Sellable {
             this.value = 50.0;
         } else this.value = 10.0;
     }
+
+    public void installAnApp(String AppName) {
+
+    }
+
+    public void installAnApp(String AppName, String Version) {
+
+    }
+
+    public void installAnApp(String AppName, String Version, int ServerAddress) {
+
+    }
+
+    public void installAnApp(List<String> AppNameList) {
+
+    }
+    public void installAnApp(URL url) {
+
+    }
+
 
     @Override
     public void turnOn() {

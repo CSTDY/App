@@ -6,7 +6,7 @@ import creatures.Sellable;
 import java.io.File;
 import java.util.Objects;
 
-public class Car extends Device implements Sellable {
+public abstract class Car extends Device implements Sellable {
     Double weight;
     String plate;
     File pic;
@@ -28,6 +28,8 @@ public class Car extends Device implements Sellable {
     public String toString() {
         return producer + " " + model + " " + value;
     }
+
+    public abstract void refuel();
 
     @Override
     public void turnOn() {

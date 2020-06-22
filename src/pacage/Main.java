@@ -7,7 +7,7 @@ import creatures.Pet;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+	// write your code hereZ
         Human me = new Human("creatures.Human");
         me.firstName = "Kamil";
         me.lastName = "Socha";
@@ -26,16 +26,16 @@ public class Main {
         me.salary();
         me.setSalary(4000.0);
 
-        Car Ibiza = new Car("ibiza", "seat");
-        Car Renault = new Car("megane", "renault");
-        Phone Sony_Ericson = new Phone("K310i", "Sony-Ericson");
+        LPG Ibiza = new LPG("ibiza", "seat");
+        Diesel Renault = new Diesel("megane", "renault");
+        Phone Sony_Erickson = new Phone("K310i", "Sony-Erickson");
         me.getVehicle();
         me.setVehicle(Ibiza);
         me.setVehicle(Renault);
         if(Ibiza.equals(Renault)) System.out.println("Cena samochodów jest taka sama");
         else System.out.println("Ceny samochodów są różne");
         System.out.println(me);
-        System.out.println(Sony_Ericson);
+        System.out.println(Sony_Erickson);
         System.out.println(dog);
         System.out.println(Ibiza);
         System.out.println(Renault);
