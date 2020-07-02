@@ -1,6 +1,5 @@
 package pacage;
 
-import creatures.Animal;
 import creatures.Human;
 import creatures.Pet;
 
@@ -16,6 +15,7 @@ public class Main {
         you.firstName = "Krystian";
         you.lastName = "Krostek";
         you.cash = 10000.0;
+        Integer index = 0;
 
         Pet dog = new Pet("dog");
         me.pet = dog;
@@ -29,9 +29,10 @@ public class Main {
         LPG Ibiza = new LPG("ibiza", "seat");
         Diesel Renault = new Diesel("megane", "renault");
         Phone Sony_Erickson = new Phone("K310i", "Sony-Erickson");
-        me.getVehicle();
-        me.setVehicle(Ibiza);
-        me.setVehicle(Renault);
+        me.getVehicle(index);
+        me.setVehicle(Ibiza, index);
+        index += 1;
+        me.setVehicle(Renault, index);
         if(Ibiza.equals(Renault)) System.out.println("Cena samochodów jest taka sama");
         else System.out.println("Ceny samochodów są różne");
         System.out.println(me);

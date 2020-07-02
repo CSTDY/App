@@ -21,7 +21,7 @@ public abstract class Device implements Sellable {
     abstract public void turnOn();
 
     @Override
-    public void sell(Human seller, Human buyer, Double price) {
+    public void sell(Human seller, Human buyer, Double price) throws Exception {
 
     }
 }

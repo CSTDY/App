@@ -11,14 +11,19 @@ public abstract class Car extends Device implements Sellable {
     String plate;
     File pic;
 
-    public Car(String model, String producer) {
+    public Car(String model, String producer, Integer yearOfProduction) {
         super(model, producer);
+        this.yearOfProduction = yearOfProduction;
         if (this.model == "megane" && this.producer == "renault") {
             this.value = 3000.0;
         }
         if (this.model == "Ibiza" && this.producer == "Seat") {
             this.value = 3000.0;
         } else this.value = 10.0;
+    }
+
+    public Car(String model, String producer) {
+        super(model, producer);
     }
 
     public boolean equals(Car other) {
@@ -37,15 +42,20 @@ public abstract class Car extends Device implements Sellable {
     }
 
     @Override
-    public void sell(Human seller, Human buyer, Double price) {
-        if (seller.auto == this) {
-            if (buyer.cash != null && buyer.cash >= price) {
-                buyer.cash = buyer.cash - price;
-                seller.cash = seller.cash + price;
-                buyer.auto = seller.auto;
-                seller.auto = null;
-                System.out.println("Kupiłeś " + this);
-            } else System.out.println("Nie możesz tego kupić");
-        } else System.out.println("Sprzedawca  nie ma tego towaru na sprzedaż!");
+    public void sell(Human seller, Human buyer, Double price) throws Exception {
+        if(!seller.hasACar(this)){
+            throw new Exception("Sprzedający nie ma samochodu");
+        }
+        if(!buyer.hasAFreePlace()){
+            throw new Exception("Kupujący nie ma miejca w garażu");
+        }
+        if(buyer.cash < price){
+            throw new Exception("Nie masz tyle pieniędzy");
+        }
+        buyer.removeCar(this);
+        seller.addCar(this);
+        buyer.cash -= price;
+        seller.cash += price;
+        System.out.println("Transakcja zakończona");
     }
 }
