@@ -1,4 +1,4 @@
-package pacage;
+package devices;
 
 import creatures.Human;
 import creatures.Sellable;

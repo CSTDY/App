@@ -1,7 +1,7 @@
 package creatures;
 
-import pacage.Car;
-import pacage.Phone;
+import devices.Car;
+import devices.Phone;
 
 import java.time.LocalDateTime;
 

@@ -1,4 +1,4 @@
-package pacage;
+package devices;
 
 public class LPG extends Car{
     public LPG(String model, String producer) {

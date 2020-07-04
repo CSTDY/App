@@ -2,10 +2,13 @@ package pacage;
 
 import creatures.Human;
 import creatures.Pet;
+import devices.Diesel;
+import devices.LPG;
+import devices.Phone;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 	// write your code hereZ
         Human me = new Human("creatures.Human", 4);
         me.firstName = "Kamil";
@@ -54,8 +57,21 @@ public class Main {
             System.out.println("Coś poszło nie tak");
         }
 
-        Ibiza.numOfCarOwners("Kamil Socha");
+        /*Ibiza.numOfCarOwners("Kamil Socha");
         Renault.checkTransactions("Kamil Socha", "Krystian Krostek");
+*/
+        Application facebook = new Application("facebook", "latest", 0.0);
+        Application spotify = new Application("spotify", "2.3.41", 14.0);
+        Application messenger = new Application("messenger", "latest", 0.0);
+
+        me.phone.installAnApp(facebook, me);
+        me.phone.installAnApp(spotify, me);
+        System.out.println(me.phone.applications);
+
+        System.out.println(me.phone.isInstalled(facebook));
+        System.out.println(me.phone.isInstalled(messenger));
+        System.out.println(me.phone.isInstalled("facebook"));
+        System.out.println(me.phone.isInstalled("messenger"));
     }
 
 }
