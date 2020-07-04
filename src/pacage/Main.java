@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code hereZ
-        Human me = new Human("creatures.Human");
+        Human me = new Human("creatures.Human", 4);
         me.firstName = "Kamil";
         me.lastName = "Socha";
         me.cash = 10000.0;
@@ -15,7 +15,7 @@ public class Main {
         you.firstName = "Krystian";
         you.lastName = "Krostek";
         you.cash = 10000.0;
-        Integer index = 0;
+        int index = 0;
 
         Pet dog = new Pet("dog");
         me.pet = dog;
@@ -31,7 +31,7 @@ public class Main {
         Phone Sony_Erickson = new Phone("K310i", "Sony-Erickson");
         me.getVehicle(index);
         me.setVehicle(Ibiza, index);
-        index += 1;
+        index ++;
         me.setVehicle(Renault, index);
         if(Ibiza.equals(Renault)) System.out.println("Cena samochodów jest taka sama");
         else System.out.println("Ceny samochodów są różne");
@@ -53,6 +53,9 @@ public class Main {
         catch(Exception e){
             System.out.println("Coś poszło nie tak");
         }
+
+        Ibiza.numOfCarOwners("Kamil Socha");
+        Renault.checkTransactions("Kamil Socha", "Krystian Krostek");
     }
 
 }
