@@ -1,4 +1,5 @@
 import devices.Car;
+import devices.Phone;
 
 public class Main {
 
@@ -20,15 +21,20 @@ public class Main {
         me.salary();
         me.setSalary(101.0);
 
-        Car Ibiza = new Car("ibiza", "seat");
-        Car Renault = new Car("megane", "renault");
+        Car Ibiza = new Car("ibiza", "seat", 2009);
+        Car Renault = new Car("megane", "renault", 2005);
         me.getVehicle();
         me.setVehicle(Ibiza);
         me.setVehicle(Renault);
 
-        System.out.println(new Car("ibiza", "seat").equals(Ibiza));
+        System.out.println(new Car("ibiza", "seat", 2019).equals(Ibiza));
         System.out.println(Ibiza);
         System.out.println(Renault);
+
+        Phone Huawei = new Phone("P20 Lite", "Huawei", 2018);
+        Huawei.turnOn();
+
+        Ibiza.turnOn();
     }
 
 }
