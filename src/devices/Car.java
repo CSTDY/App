@@ -10,8 +10,8 @@ public class Car extends Devices {
         this.producer = producer;
         this.yearOfProduction = yearOfProduction;
         if (this.model == "megane" && this.producer == "renault" && this.yearOfProduction == 2005) {
-            this.value = 3000.0;
-        } else this.value = 10.0;
+            this.value = 1000.0;
+        } else this.value = 100.0;
     }
 
     @Override
