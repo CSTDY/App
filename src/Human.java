@@ -1,3 +1,5 @@
+import devices.Car;
+
 import java.time.LocalDateTime;
 
 public class Human {
@@ -8,19 +10,19 @@ public class Human {
     private Double Salary;
 
     public void salary(){
-        System.out.println("Dane o wypłacie zostały pobrane: " + LocalDateTime.now());
-        System.out.println("Twoja wypłata: " + this.Salary);
+        System.out.println("Your data about your salary was taken: " + LocalDateTime.now());
+        System.out.println("Your salary: " + this.Salary);
     }
     public void setSalary(double x){
         if (x<=0){
-            System.out.println("Okradanie swoich pracowników jest nieetyczne");
+            System.out.println("You can't steal your emploees");
         }
         else {
-            System.out.println("Dane zostały wysłane do systemu księgowego");
-            System.out.println("Twój aneks czeka na odbiór u Pani Hani z kadr");
-            System.out.println("ZUS i US otrzymały informację o twoim wynagrodzeniu!");
+            System.out.println("Your data has been sent to accounting system.");
+            System.out.println("Your annex is waiting at Mrs. Hania from the HR department.");
+            System.out.println("ZUS and US have recived informations about your salary.");
             this.Salary=x;
-            System.out.println("Twoja wypłata wynosi: " + this.Salary);
+            System.out.println("Your salary: " + this.Salary);
         }
     }
 
@@ -30,11 +32,17 @@ public class Human {
 
     public void setVehicle(Car vehicle) {
         if (vehicle.value < this.Salary) {
-            System.out.println("Właśnie kupiłeś samochód za gotówkę!");
+            System.out.println("You bought a car for cash.");
             this.auto = vehicle;
         } else if (vehicle.value / 12.0 < this.Salary) {
-            System.out.println("Gratuluję, kupiłeś samochód, niestety na kredyt");
+            System.out.println("You bought car on credit.");
             this.auto = vehicle;
-        } else System.out.println("Zapisz się na studia i znajdź nową robotę albo idź po podwyżkę");
+        } else System.out.println("Sign up to university or go for a pay raise.");
+    }
+
+    @Override
+
+    public String toString() {
+        return firstName + " " + lastName;
     }
 }

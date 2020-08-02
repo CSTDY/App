@@ -26,18 +26,25 @@ public class Animal {
 
     public void feed() {
         if (this.weight == 0.0) {
-            System.out.println("am dead bro");
+            System.out.println("I'm dead bro");
         } else {
             this.weight++;
-            System.out.println("thx for food bro my weight is: " + this.weight);
+            System.out.println("Thanks for food bro my weight is: " + this.weight);
         }
     }
 
     public void takeForAWalk() {
         if (this.weight == 0.0) {
-            System.out.println("am dead bro");
+            System.out.println("I'm dead bro");
         } else {
             this.weight--;
-            System.out.println("thx for walk bro my weight is: " + this.weight);
+            System.out.println("Thanks for walk bro my weight is: " + this.weight);
         }
-}}
+    }
+
+    @Override
+
+    public String toString() {
+        return "Spiece: " + species + ", Name: " + name + ", Weight: " + weight;
+    }
+}
