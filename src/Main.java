@@ -28,25 +28,30 @@ public class Main {
         me.salary();
         me.setSalary(101.0);
 
-        Car Ibiza = new Car("ibiza", "seat", 2009);
         Car Renault = new Car("megane", "renault", 2005);
-        me.setVehicle(Ibiza);
+        me.getVehicle();
         me.setVehicle(Renault);
         me.getVehicle();
-
-        System.out.println(new Car("ibiza", "seat", 2019).equals(Ibiza));
-        System.out.println(Ibiza);
+        System.out.println(new Car("megane", "renault", 2005).equals(Renault));
         System.out.println(Renault);
 
-        Phone Huawei = new Phone("P20 Lite", "Huawei", 2018);
         Phone Nokia = new Phone("3310", "Nokia", 1410);
         me.getPhone();
         me.setPhone(Nokia);
         System.out.println(me.cash);
-        Ibiza.turnOn();
-
+        Renault.turnOn();
+        System.out.println("My cash before trade: " + me.cash);
+        System.out.println("Your cash before trade: " + you.cash);
         dog.sell(me, you, 1000.00);
+        System.out.println("My cash after trade: " + me.cash);
+        System.out.println("Your cash after trade: " + you.cash);
         you.pet.takeForAWalk();
+        you.pet.takeForAWalk();
+        me.getPhone().sell(me, you, 900.0);
+        you.getPhone().turnOn();
+        me.getVehicle().sell(me, you, 90.0);
+        you.getVehicle().turnOn();
+
     }
 
 }

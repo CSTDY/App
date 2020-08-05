@@ -3,6 +3,7 @@ package animals;
 import devices.*;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 
 public class Human {
     public String firstName;
@@ -19,7 +20,7 @@ public class Human {
     }
     public void setSalary(double x){
         if (x<=0){
-            System.out.println("You can't steal your emploees");
+            System.out.println("You can't steal your employees salary");
         }
         else {
             System.out.println("Your data has been sent to accounting system.");
@@ -31,10 +32,8 @@ public class Human {
         }
     }
 
-    public Car getVehicle() {
-        return this.auto;
-    }
-
+    public Car getVehicle() { return this.auto; }
+    public Car removeVehicle() { return this.auto = null; }
     public void setVehicle(Car vehicle) {
         if (vehicle.value < this.Salary) {
             System.out.println("You bought a car for cash.");
@@ -47,12 +46,11 @@ public class Human {
     }
 
     public Phone getPhone() { return this.phone; }
-
+    public Phone removePhone() { return this.phone = null; }
     public void setPhone(Phone phone) {
         if (phone.value < this.Salary) {
             System.out.println("You bought a phone for cash.");
             this.phone = phone;
-            this.cash -= phone.value;
         } else if (phone.value / 12.0 < this.Salary) {
             System.out.println("You bought phone on credit.");
             this.phone = phone;

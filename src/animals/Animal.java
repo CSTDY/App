@@ -54,35 +54,38 @@ public class Animal implements salleable {
     public void sell(Human seller, Human buyer, Double price) {
         if (seller.pet.species.equals("dog")) {
             if ( price < buyer.cash) {
-                buyer.cash =- price;
+                buyer.cash -= price;
+                seller.cash += price;
                 buyer.pet = seller.pet;
-                buyer.pet = null;
-                System.out.println("Dog is selled.");
+                seller.pet = null;
+                System.out.println("Dog is sold for " + price + "$");
             } else {
                 System.out.println("Buyer don't have enough money");
             }
         } else if (seller.pet.species.equals("cat")) {
             if ( price < buyer.cash) {
-                buyer.cash =- price;
+                buyer.cash -= price;
+                seller.cash += price;
                 buyer.pet = seller.pet;
-                buyer.pet = null;
-                System.out.println("Cat is selled.");
+                seller.pet = null;
+                System.out.println("Cat is sold for " + price + "$");
             } else {
                 System.out.println("Buyer don't have enough money");
             }
         } else if (seller.pet.species.equals("horse")) {
             if ( price < buyer.cash) {
-                buyer.cash =- price;
+                buyer.cash -= price;
+                seller.cash += price;
                 buyer.pet = seller.pet;
-                buyer.pet = null;
-                System.out.println("Horse is selled.");
+                seller.pet = null;
+                System.out.println("Horse is sold for " + price + "$");
             } else {
                 System.out.println("Buyer don't have enough money");
             }
         } else if (seller.pet.species.equals("human")) {
-            System.out.println("You can't trade Human");
+            System.out.println("You can't sell a man");
         } else {
-            System.out.println("This pet is not for sale!");
+            System.out.println("This pet is not for sale! Or seller dont have this pet");
         }
     }
 }

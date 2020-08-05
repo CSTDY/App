@@ -16,7 +16,5 @@ public abstract class Devices implements salleable{
     }
 
     @Override
-    public void sell(Human seller, Human buyer, Double price) {
-
-    }
+    public abstract void sell(Human seller, Human buyer, Double price);
 }

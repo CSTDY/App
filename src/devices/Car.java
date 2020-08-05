@@ -1,5 +1,7 @@
 package devices;
 
+import animals.Human;
+
 public class Car extends Devices {
     Double weight;
     String plate;
@@ -25,5 +27,22 @@ public class Car extends Devices {
     @Override
     public void turnOn() {
         System.out.println("You turn on your car");
+    }
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+        if (seller.getVehicle() == null) {
+            System.out.println("Seller don't have this car");
+        } else {
+            if (price < buyer.cash) {
+                buyer.cash -= price;
+                seller.cash += price;
+                buyer.setVehicle(seller.getVehicle());
+                seller.removeVehicle();
+                System.out.println("Car is sold for " + price + "$");
+            } else {
+                System.out.println("Buyer don't have enough money");
+            }
+        }
     }
 }
