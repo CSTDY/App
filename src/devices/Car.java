@@ -1,6 +1,6 @@
 package devices;
 
-import animals.Human;
+import creatures.*;
 
 public class Car extends Devices {
     Double weight;

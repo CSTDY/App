@@ -1,8 +1,8 @@
-package animals;
+package creatures;
 
 import interfaces.salleable;
 
-public class Animal implements salleable {
+public abstract class Animal implements salleable, Feedable {
     final String species;
     private Double weight;
     public String name;

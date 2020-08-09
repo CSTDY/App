@@ -1,6 +1,6 @@
 package devices;
 
-import animals.Human;
+import creatures.*;
 
 public class Phone extends Devices{
 

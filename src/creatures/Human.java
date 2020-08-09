@@ -1,9 +1,8 @@
-package animals;
+package creatures;
 
 import devices.*;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 
 public class Human {
     public String firstName;

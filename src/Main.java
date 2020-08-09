@@ -1,4 +1,4 @@
-import animals.*;
+import creatures.*;
 import devices.*;
 
 public class Main {
@@ -17,7 +17,7 @@ public class Main {
 
         you.setSalary(2000.0);
 
-        Animal dog = new Animal("dog");
+        Animal dog = new Pet("dog");
         me.pet = dog;
         me.pet.name = "Azor";
         System.out.println(dog);

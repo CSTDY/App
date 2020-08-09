@@ -1,5 +1,6 @@
 package devices;
-import animals.*;
+
+import creatures.Human;
 import interfaces.*;
 
 public abstract class Devices implements salleable{
