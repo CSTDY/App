@@ -28,11 +28,11 @@ public class Main {
         me.salary();
         me.setSalary(101.0);
 
-        Car Renault = new Car("megane", "renault", 2005);
+        Car Renault = new LPG("megane", "renault", 2005);
         me.getVehicle();
         me.setVehicle(Renault);
         me.getVehicle();
-        System.out.println(new Car("megane", "renault", 2005).equals(Renault));
+        System.out.println(new Electric("megane", "renault", 2005).equals(Renault));
         System.out.println(Renault);
 
         Phone Nokia = new Phone("3310", "Nokia", 1410);
@@ -51,6 +51,11 @@ public class Main {
         you.getPhone().turnOn();
         me.getVehicle().sell(me, you, 90.0);
         you.getVehicle().turnOn();
+        you.getPhone().installAnnApp("Netflix");
+        you.getPhone().installAnnApp("Wiesiek", "v.2.0");
+        you.getPhone().installAnnApp("Steam", "v.2.0", "https://www.google.com/search?q=translator&oq=tra&aqs=chrome.1.69i59l3j69i60j5l3.2360j0j1&sourceid=chrome&ie=UTF-8");
+        String[] apps = {"Netflix", "HBO", "Flash"};
+        you.getPhone().installAnnApp(apps);
 
     }
 

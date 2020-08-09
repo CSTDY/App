@@ -2,7 +2,7 @@ package devices;
 
 import creatures.*;
 
-public class Car extends Devices {
+public abstract class Car extends Devices {
     Double weight;
     String plate;
     public Double value;
@@ -15,6 +15,8 @@ public class Car extends Devices {
             this.value = 1000.0;
         } else this.value = 100.0;
     }
+
+    public abstract void refuel();
 
     @Override
     public boolean equals(Object obj) {
